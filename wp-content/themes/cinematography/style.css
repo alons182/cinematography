@@ -1334,17 +1334,40 @@ input[type="submit"] {
 .fp-controlArrow.fp-prev,
 .fp-controlArrow.fp-next {
   font-family: 'FontAwesome';
-  font-size: 5em;
+  font-size: 4em;
   color: #ff004c;
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.75);
 }
 .fp-controlArrow.fp-prev:before {
   content: "\f104";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .fp-controlArrow.fp-next {
   right: 2.5rem;
 }
 .fp-controlArrow.fp-next:before {
   content: "\f105";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 800px) {
   .fp-controlArrow.fp-next {
