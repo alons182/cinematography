@@ -14,9 +14,17 @@
 
 
 </div><!-- #page -->
-
+ <div class="contact-us">
+        <a href="#" class="close"><i class="fa fa-times"></i></a>
+        <div class="contact-us-content">
+          
+                <?php get_template_part( 'template-parts/float', 'contact' ); ?>
+                
+            
+        </div>
+    </div>
 <?php 
-get_sidebar('menu');
+//get_sidebar('menu');
 wp_footer(); 
 ?>
 

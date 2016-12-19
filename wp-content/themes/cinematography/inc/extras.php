@@ -37,3 +37,17 @@ function cinematography_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'cinematography_pingback_header' );
+
+
+
+function cinematography_custom_nav_attributes ( $atts, $item, $args ) {
+    if(isset($atts['rel']))
+    {
+    	$porciones = explode("-", $atts['rel']);
+	    $atts['data-goto'] = $porciones[0];
+	    $atts['data-gotoslide'] = $porciones[1];
+    }
+    
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'cinematography_custom_nav_attributes', 10, 3 );

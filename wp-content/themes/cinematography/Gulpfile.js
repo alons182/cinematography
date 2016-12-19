@@ -25,8 +25,12 @@ var gulp        = require('gulp'),
 gulp.task('js', function () {
   gulp.src([
       './assets/js/vendor/jquery-1.11.0.min.js',
+      './assets/js/vendor/owl.carousel.js',
+      './assets/js/vendor/jquery.easings.min.js',
+     './assets/js/vendor/scrolloverflow.js',
       './assets/js/vendor/jquery.fullPage.min.js',
       './assets/js/vendor/jquery.mCustomScrollbar.concat.min.js',
+       './assets/js/vendor/jquery.hoverIntent.minified.js',
       /*'./assets/js/vendor/jquery.contentcarousel.js',*/
       /*'./assets/js/vendor/wow.min.js',*/
       /*'./assets/js/vendor/imagesloaded.min.js',*/
@@ -41,7 +45,8 @@ gulp.task('js', function () {
       /*'./assets/js/vendor/jquery.uniform.js',*/
      /* './assets/js/vendor/jquery.onepagenav.js',
      /*'./assets/js/vendor/grid.js',*/
-      './assets/js/vendor/jquery.slimscroll.js',
+     /* './assets/js/vendor/jquery.slimscroll.js',*/
+     
       './assets/js/main.js'
 
     ])
@@ -62,7 +67,7 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('css', function () {
-  gulp.src(['./assets/css/jquery.fullPage.css','./assets/css/main.css','./assets/css/jquery.mCustomScrollbar.css','./assets/css/component.css','./assets/css/font-awesome.css','./assets/css/animate.css'])
+  gulp.src(['./assets/css/jquery.fullPage.css','./assets/css/main.css','./assets/css/owl.carousel.css','./assets/css/jquery.mCustomScrollbar.css','./assets/css/component.css','./assets/css/font-awesome.css','./assets/css/animate.css'])
     /*.pipe(minifyCSS({ keepSpecialComments: '*', keepBreaks: '*'}))*/
     /*.pipe(cleanCSS({compatibility: 'ie8'}))*/
     .pipe(concat('style.css'))

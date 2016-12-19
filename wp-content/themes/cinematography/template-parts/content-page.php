@@ -9,35 +9,63 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+	<div class="film">
+		<?php if ( has_post_thumbnail() ) :
 
-	<div class="entry-content">
-		<?php
-			the_content();
+	            $id = get_post_thumbnail_id($post->ID);
+	            $thumb_url = wp_get_attachment_image_src($id,'full', true);
+	            ?>
+	            
+	          <div class="film-content-img" style="background-image: url('<?php echo $thumb_url[0] ?>');"></div>
+	                
+	        <?php endif; ?>
+	        <div class="film-container">
+		
+				<div class="film-content">
+					
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cinematography' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+					<?php the_title( '<h1 class="film-title">', '</h1>' ); ?>
+					
+					<?php
+						the_content();	
+					?>
+				</div><!-- .entry-content -->
+				<div class="film-video">
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'cinematography' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
+					<?php echo rwmb_meta( 'rw_video') ?>
+
+				</div>
+			</div>
+	</div>
+	<div class="feedback">
+	
+		<h2 class="feedback-title">Testimonials</h2>	
+		<div id="testimonials" class="owl-carousel">
+			<?php $testimonials = rwmb_meta( 'rw_testimonials'); 
+				foreach ($testimonials as $testimonial) { ?>
+					<div class="feedback-item">
+						<img src="<?php echo get_template_directory_uri();  ?>/img/left_quotation.png" alt="feedback" class="quote">
+						
+						
+						<div class="feedback-item-text">
+							<?php echo $testimonial ?>
+						</div> 
+						
+					</div>
+			<?php	
+				}
 			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+
+		</div>
+	</div>
+	
+	<div class="contact">
+
+		Want us to create your film? <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="btn contact-link">Contact Us</a>
+
+	</div>
+	
+
+	
 </article><!-- #post-## -->

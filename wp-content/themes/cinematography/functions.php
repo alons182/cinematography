@@ -41,6 +41,7 @@ function cinematography_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'film-thumb', 640, 430, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -140,3 +141,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Load custom post type.
+ */
+require get_template_directory() . '/inc/cpt.php';
+
+
+

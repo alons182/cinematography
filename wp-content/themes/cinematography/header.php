@@ -20,6 +20,27 @@
 </head>
 
 <body <?php body_class(); ?>>
+<header class="header">
+	<div class="inner">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="cinematography"  /></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo-small"><img src="<?php echo get_template_directory_uri();?>/img/logo-small.png" alt="cinematography" /></a>
+                    
+                    <?php wp_nav_menu( array(
+		                     'theme_location' => 'primary',
+		                     'menu_id' => 'primary-menu',
+		                     'container'       => 'nav',
+			                'container_class' => 'header-menu',
+			                'container_id'    => '',
+			                'menu_class'      => 'header-menu-ul',
+		                      ) 
+	                      ); 
+	                      ?>
+				 <button id="btn-menu" class="header-btn-menu">
+		            <i class="fa fa-bars"></i>
+		        </button>
+	</div>
+	 
+</header>
 <div id="fullpage">
 
 

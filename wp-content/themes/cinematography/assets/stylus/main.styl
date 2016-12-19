@@ -5,15 +5,19 @@
 
 
 rojo = #FF004C
-oscuro = #303642
+oscuro = #384353
 vino = #BB0034
+azul = #2b3747
+gris = #7f8c9b
 
+*
+	box-sizing border-box
 body
 	font-family 'Open Sans', sans-serif
 	line-height 25px
 	font-size 14px !important
-	color oscuro
-	background oscuro
+	color white
+	background #F8F8F8
 
 	&:before
 		content: url(./img/bg-home.jpg) url(./img/bg-page1.jpg) url(./img/bg-page2.jpg) url(./img/bg-page3.jpg);
@@ -22,7 +26,6 @@ body
 
 h1
 h2
-	font-family 'Times New Roman'
 	color oscuro
 	font-size 2em
 	line-height 40px
@@ -43,6 +46,11 @@ ul
 p 
 	margin-top 0
 	margin-bottom 15px
+
+img
+	max-width 100%
+	height auto
+	
 input[type="text"]
 input[type="email"]
 textarea
@@ -53,7 +61,7 @@ textarea
 	height auto;
 
 input[type="submit"]
-	background-color rojo
+	background-color gris
 	color white 
 	padding .5rem 2rem
 	text-transform uppercase
@@ -61,6 +69,28 @@ input[type="submit"]
 	outline none
 /*#fullpage
 	display none*/
+.wpcf7-submit
+.btn
+	padding .5rem .8rem
+	display inline-block
+	color #000
+	transition all .5s ease
+	border 1px solid amarillo
+	box-shadow 0 1px 1px rgba(0, 0, 0, .75)
+	font-weight 700
+	text-transform uppercase
+	background-color white
+	&:hover
+		background-color gris
+		border-color #d6d6d6
+		box-shadow 0 1px 1px gris
+		color azul
+.wpcf7-submit
+.btn-azul
+	background-color azul
+	border-color azul
+	color #FFF
+	
 .show-site
 	display block !important
 
@@ -72,513 +102,414 @@ input[type="submit"]
 @media screen and (min-width: 800px)
 	.inner
 		width 50%
-.logo
-	position absolute
-	z-index 2
-	top 10px
-	left 10px
-	font-size 2.5em
-	color rojo
-	font-weight 700
-	width 70px//**150px
-	img 
-		width 100%
-.logo-home
-	display inline-block
-	//font-size 15em
-	color rojo
-	font-weight 700
-	margin-top 30px
-	background: rgba(256,256,256,1);
-	padding: .5em .5em 0;
-	border-bottom: 3px solid #787878;
-	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.8);
-	box-shadow: 1px 1px 2px rgba(0,0,0,.8);
-	img 
-		width 100%
-
-.menu-home
-	ul 
-		li 
-			display inline-block
-			vertical-align top 
-		a 
-			display block
-			color rojo
-			text-transform uppercase
-			padding .5rem
-			font-weight 700
-			font-size 1rem
-			&:hover
-				color white
-.section
-	text-align center
-	overflow hidden
-	
-	article
-		position relative
-		margin-top 1rem//100px
-		padding-bottom 3rem
-		z-index 999
-	h2
-		font-size 1.5rem //3rem
-		text-transform uppercase
-
-	&.active
-		article
-			animation-name: fadeInUp;
-			animation-duration: 1s;
-		/*.section-bg
-			transition: background .1s ease-in-out,margin .1s ease-in;
-			animation-name: pan;
-			animation-duration: 50s;
-			animation-iteration-count: infinite;*/
-@media screen and (min-width: 800px)
-	.section
-		article
-			margin-top 100px
-		h2
-			font-size 3rem
-						
-.section-title
-	margin-bottom 0
-.section-bg
-	background-size cover
-	background-position center center
-	background-repeat no-repeat
-	background-size cover
-	//background-attachment fixed
-	position absolute
-	top 0
-	left 0
-	width 100%;
-	height 100%
-	&:after
-		content ''
-		background rgba(0,0,0,.35)
-		position absolute
-		left 0
-		right 0
-		bottom 0
-		top 0
-		width 100%
-		height 100%
-		
-	video
-		position: absolute;
-		left 0
-		right: 0;
-		bottom: 0;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		
-	
-.slide-home
-	article
-		margin-top 5rem//0200px
-	p 
-		color white
-		text-shadow 1px 1px 2px rgba(0,0,0,.75)	!important
-@media screen and (min-width: 800px)
-	.slide-home
-		article
-			margin-top 200px
-.page-home
-	.slide-home
-		background none
-		
-		p
-			color white
-
-		article 
-			margin-top 2rem
-		
-	.slide-2
-		background-image url(./img/about.jpg);
-		background-size cover
-		background-repeat no-repeat
-		background-position center center	
-		p
-			color white 
-			text-shadow 1px 1px 2px rgba(0,0,0,.75)
-	.slide-3
-		p
-			color oscuro
-			text-shadow none
-	.section-bg
-		background-image: url(./img/bg-home.jpg);
-	.section-title
-		color oscuro
-		font-size 45px
-	.section-intro
-	p
-		color #FFF
-		margin-top 30px
-		font-size 16px
-		text-shadow 1px 1px 2px rgba(0,0,0,.75)
-		
-@media screen and (min-width: 800px)
-	.page-home
-		.slide-home
-			article 
-				margin-top 200px
-.page-1
-	.section-bg
-		background-image: url(./img/bg-page1.jpg);
-
-	.slide-home
-		background none
-		p 
-			color #FFF
-		h2
-			color #FFF
-
-	.slide-2	
-		&.active
-			.p1
-				transform translate3d(213px,184px,0)
-			.p2
-				transform: translate3d(213px, 0px, 0px);
-			.p3
-				transform: translate3d(525px, 0px, 0px);
-			img 
-				left 40px
-		
-		
-	.slide-3	
-		&.active
-			.p1
-				transform translate3d(320px,100px,0)
-			.p2
-				transform: translate3d(640px, 100px, 0px);
-			.p3
-				transform: translate3d(510px, 285px, 0px);
-			img 
-				left 40px
-		
-			
-		.slide-box
-			position static
-			width auto
-	.slide-4	
-		&.active
-			.p1
-				transform translate3d(213px,360px,0)
-			.p2
-				transform: translate3d(213px, 180px, 0px);
-			.p3
-				transform: translate3d(213px, 0px, 0px);
-			img 
-				left 40px
-		
-		/*.slide-box
-			position static
-			width auto*/
-	
-.page-2
-	.section-bg
-		background-image: url(./img/bg-page2.jpg);
-	
-	.slide-home
-		background none
-		p 
-			color #FFF
-		h2
-			color #FFF
-	
-.page-3
-	.section-bg
-		background-image: url(./img/bg-page3.jpg);
-	
-	.slide-home
-		background none
-		h2
-			color #FFF
-		p 
-			color #FFF
-			
-.page-4
-	.section-bg
-		background-image: url(./img/bg-page3.jpg);
-	
-	.slide-home
-		background none
-		h2
-			color #FFF
-		p 
-			color #FFF
-
-.slide 
-	background url('./img/bg.png') #FFF
-	
-	p
-		color oscuro
-		text-shadow none
-	
-.slide-imageContainer
-	display block
-	position absolute
-	z-index 1
-	top 42%
-	left 58%
-	//margin-top -325px
-	margin-left -747px
-	width 800px
-	height 696px
-
-	img 
-		position absolute
-		//left 0//40px
-		//top 100px
-		transition all 0.7s ease-out
-
-.slide-box
-	position absolute
-	top: 190px;
-	left: 38%;
-	//top 50%
-	//left 50%
-	//margin-top -192px
-	//margin-left 89px
-	width 395px
-	z-index 1
-	
 		
 
-.sidebar
+.header
 	position fixed
 	top 0
 	right 0
-	width 60px
-	height 100%
+	left 0
+	width 100%
+	height 60px
 	z-index 100
-	//display none
-	
-
-.nav-slides
-	position absolute
-	right -500px
-	top 0
-	width 500px
-	height 100%
-	transition all .3s ease-out
-	//border-left 1px solid #23272F
-
-	&.open 
-		right 60px
-
-.slide-item 
-	display block
-	width 500px
-	height 16.666%
-	overflow hidden
-	transition all .2s ease-out
-	position relative
-	background rgba(42, 47, 55, 0.9)
-	border-bottom 1px solid #23272F
-	&:hover
-		.slide-description
-			opacity 1
-		&:before
-			width 100%
-	&:before
-		content: "";
-		background: rgba(35, 39, 47, 0.9);
-		width 0
-		height 100%
+	background-color white
+	//display none		
+	&-logo 
+		width 250px
+		display none
+		&-small
+			display block
+			width 50px 
+			margin-top 5px
+	&-menu
+		color #000
+		display none
+		background-color white
 		position absolute
-		top 0
-		right 0
-		transition all .5s ease-out
-
-.slide-description
-	display block
-	position relative
-	width 220px
-	height 100%
-	padding 25px 5px 25px 25px
-	box-sizing border-box
-	transition all .2s ease-out
-	overflow hidden
-	opacity .5
-
-	strong
-		display block
-		color #FFF
-		font-size 18px
-		margin-bottom 5px
-		font-family 'Time New Roman', serif
-
-	small
-		color #FF004C
-		font-size 12px
-		transition all .2s ease-out
-
-.slide-bg
-	position absolute
-	top 0
-	left 250px
-	height 100%
-	text-align center
-	overflow hidden
-	width 250px
-	background-repeat no-repeat
-	background-position center center
-	background-size cover
-	margin 0
-
-.menu-container
-	position absolute
-	top 0
-	right 0
-	width 60px
-	height 100%
-	z-index 3
-	background rojo
-
-	.toggle
-		position absolute
-		top 20px
-		left 15px
-		color #FFF
-		font-size 1.5em
-		transition all .2s ease-out
-		&:hover
-			transform scale(1.2)
-			&.open
-				transform: rotate(90deg);
-		&.open 
-			i:before
-				content: "\f00d";
-			
-				 
-				
-	.terms
-		position absolute
-		bottom 80px	
-		left -20px
-		color #23272F
-		font-size 11px
-		text-decoration none
-		transform rotate(-90deg)
-		white-space nowrap
-		transition all .2s ease-out
-		&:hover
-			color #FFF
-		
-	.avotz
-		font-size 2.5rem
-		color #23272F
-		position absolute
-		bottom 0px	
+		top 55px
 		left 0
-.menu 
-	position absolute
-	top 30%
-	left 15px
-	li 
-		display block
-		margin-bottom 25px
+		right 0
+		width 100% 
+		padding .5rem
+		ul 
+			text-align center
+		li 
+			position relative
 		a 
 			display block
-			color vino
-			//padding .5em
-			font-size 1.5em
-			transition all .2s ease-in
-
+			padding .5rem
+			color azul
+			text-transform uppercase
 			&:hover
-				color #FFF
-		
-	.current
-		a 
-			color #FFF
-
-	
-
-#fp-nav
-	//display none
-	
-	&.right
+				border-bottom 1px solid gris	
+	&-btn-menu
+		position absolute
 		right 0
-	span
-		background rojo 
-		border none 
-		opacity .7
-		transform scale(0.7) 
-		transition all .2s ease
-		width 12px
-		height 12px
-		
+		top 6px
+		background-color transparent
+		color #000
+		border none
+		font-size 1.8rem
+		outline none
 
-	&:hover		
-	.active
-		span
-			background rojo !important
-			transform scale(1) 
-			opacity 1
-@media screen and (min-width: 800px)
-	#fp-nav
-		&.right
-			right 65px 
-.fp-controlArrow
-	border none 
-	&.fp-prev
-	&.fp-next
-		font-family 'FontAwesome'
-		font-size 4em
-		color rojo
-		display block
-		height 50px
-		width 50px
-		background-color rgba(256,256,256,0.85)
-		border-radius 50%
-		box-shadow 1px 1px 2px rgba(0,0,0,0.75)
-		&:hover
-			background-color rgba(256,256,256,1)
-		
-		
+@media screen and (min-width:900px)
+	.header
+		.inner 
+			width 70%
+		&-logo 
+			display block
+			float left
+			&-small
+				display none
+		&-menu
+			display block !important
+			float right
+			position static
+			background-color transparent
+			width auto
+			
+			li 
+				display inline-block
+				vertical-align top
+				
+			.sub-menu
+				display none
+				position absolute
+				background-color azul
+				color white
+				width 200px
+				font-size 13px
+				top 55px
+				left 50%
+				transform translate(-50%, 0)
+				
+				a 
+					color white
+				li 
+					display block
+					position relative
+					
+				.sub-menu
+					top 0
+					left auto
+					right -180px
+					transform translate(0, 0)
+					background-color gris
+					
+				
+				
+		&-btn-menu
+			display none
 
-	&.fp-prev
-		&:before
-			content "\f104"
-			position absolute
-			top 50%
-			left 50%
-			transform translate(-50%,-50%)
-	&.fp-next
-		right 2.5rem
-		&:before
-			content "\f105"
-			position absolute
-			top 50%
-			left 50%
-			transform translate(-50%,-50%)
+.section
+	text-align center
+	overflow hidden
 		
+	h2
+		font-size 1.5rem //3rem
+		text-transform uppercase
+	
+	&-title
+		margin-bottom 0
+	&-bg
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
+		background-size cover
+		//background-attachment fixed
+		position absolute
+		top 0
+		left 0
+		width 100%;
+		height 100%
+		&:after
+			content ''
+			background rgba(0,0,0,.35)
+			position absolute
+			left 0
+			right 0
+			bottom 0
+			top 0
+			width 100%
+			height 100%
+				
+		video
+			position: absolute;
+			left 0
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			
+	article.film
+	article.page
+		padding-top 3.8rem
+
+/*@media screen and (min-width: 800px)
+	.section
+		h2
+			font-size 2rem*/
+
+.slide 
+	background #F8F8F8//background url('./img/bg.png') #FFF
+	&-container
+		display flex
+		align-items: center;
+		justify-content: center;
+		height 100%
+	&-bottom 
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		width 100%
+		background-color rgba(255,255,255,.25)
+		padding .5rem
+		font-size 1rem
+		&-text 
+			text-align left
+	&-banner
+		width 100%
+		height 290px
+		position relative
+		overflow hidden
+		padding-top 3.8rem
+		&:after
+			content ''
+			background rgba(0,0,0,.35)
+			position absolute
+			left 0
+			right 0
+			bottom 0
+			top 0
+			width 100%
+			height 100%
+		video
+			position absolute
+			left 0
+			right 0
+			width 100%
+	&-home
+		background none
+		
+		p
+			text-shadow 1px 1px 2px rgba(0,0,0,.75)
+
+		> article
+			position relative
+			z-index 999 
 			
 		
-@media screen and (min-width: 800px)
-	.fp-controlArrow
-		&.fp-next
-			right 180px
+	&-detail
+		p
+			text-shadow 1px 1px 2px rgba(0,0,0,.75)
+	&-title
+		color white
+		font-size 45px
+		line-height 45px
+
+@media screen and (min-width: 768px)
+	.slide
+		&-banner
+			height 490px
+@media screen and (min-width: 1200px)
+	.slide
+		&-banner
+			height 550px
+
+
+.films
+	background-color white
+	padding-bottom 2rem
+	&-title
+		background-color white 
+		padding 2rem .5rem
+		font-size 1.5rem !important
+		text-align center
+		text-transform uppercase
+	&-container
+		display flex
+		flex-wrap wrap 
+		justify-content space-between
+		//margin-bottom .5rem
+		
+	&-item 
+		width 100%//33%
+		height 330px
+		position relative
+		overflow hidden
+		&:hover
+			.films-item-link
+				opacity 0
+		&-link
+		&-img
+			position absolute 
+			left 0
+			right 0
+			bottom 0
+			top 0
+			width 100%
+			height 100%
+		&-link
+			//background-color rgba(#333,0.4)
+			opacity 1
+			transition all .5s ease
+		&-img 
+			background-position center center
+			background-size cover
+			background-repeat no-repeat
+			top -40px
+		&-title
+			background-color white
+			color azul
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			text-align center
+			a 
+				color azul
+				&:hover
+					color gris
+/*@media screen and (min-width: 740px)
+	.films
+		&-item
+			width 49%*/
+/*@media screen and (min-width: 1024px)
+	.films
+		&-item
+			width 33% */ 
+			
+/*@media screen and (min-width: 1600px)
+	.films
+		&-item 
+			height 430px*/
+
+.film
+	position relative
+	&-content-img
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
+		width 100%
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		
+	&-container
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		position relative
+		background-color rgba(0,0,0,.25)
+		
+	&-content
+		width 100%//33.33%
+		min-height 250px
+		background-color rgba(0,0,0,.75)
+		padding 2rem
+		color white
+		font-size 1rem
+		order: 2;
+		a 
+			color gris
+	&-video
+		position relative
+		width 100%
+		height 300px
+		order: 1;
+		iframe
+			width 100%
+			height 100%
+				
+	&-title 
+		margin-bottom 1rem
+		color gris !important
+@media screen and (min-width: 980px)
+	.film
+		&-content
+			width 33.33%
+			min-height 400px
+			order: 1; 
+		&-video
+			margin-top 2rem
+			width 50%
+			height 330px
+			margin-right 5rem
+			order: 2;
+
+@media screen and (min-width: 1600px)
+	.film
+		&-content
+			min-height 500px 
+		&-video
+			width 50%
+			height 430px 
+
+.feedback
+	padding 3rem .5rem
+	.quote
+		width 40px !important
+		display block
+		float left
+		display none
+	&-title
+		text-align center
+		margin-bottom 2rem
+		color azul !important
+		text-transform uppercase
+	&-item
+		background-color white
+		padding 3rem 4rem
+		width 100%
+		margin 0 auto
+		font-size 1.2rem
+		box-shadow 1px 1px 5px rgba(0,0,0,.2)
+		color #303642
+		margin-bottom .5rem
+		
+		
+@media screen and (min-width: 980px)
+	.feedback
+		&-item
+			width 60%
+			.quote
+				display block
+			&-text 
+				padding-left 3.5rem
+		
+.contact 
+	padding 3rem .5rem
+	text-align center
+	font-size 1.5rem
+	background-color azul
+	color #fff
+	.btn
+		display inline-block
+		font-size 1rem
 
 .terms-conditions
 .contact-us
 	display block
-	position absolute
+	position fixed
 	z-index 99999
 	top 0
 	right -550px
 	width 550px
 	height 100%
-	background #2A2F37
+	background #152233
 	color #FFF
 	padding 20px 15px 40px 40px
 	box-sizing border-box
 	transition all .2s ease
 	&.open 
-		right 120px
+		right 60px
+	h1
+		color gris
 	h4
 		color rojo
 		text-transform uppercase
@@ -618,30 +549,10 @@ input[type="submit"]
 .terms-conditions-content
 .contact-us-content
 	height 100%
-	
-.page-normal
-	padding-top 4rem
-	h1
-	h2
-		color rojo
-	.inner 
-		width 90%
-.fp-responsive
-	//overflow-x hidden !important
-	.sidebar
-		display none	
-.contact-us
-	padding 2rem
-	h1
-		color rojo
+
+
 
 .scroller
-	position absolute
-	bottom -180px
-	left 50%
-	z-index 3
-	width 300px
-	margin-left -150px
 	text-align center
 	color #FFF
 	font-size 12px
@@ -653,35 +564,103 @@ input[type="submit"]
 		font-size 4.5em
 		color
 	b 
-		color rojo 
+		color azul 
 		
-.scroller-img
-	display block
-	margin 0 auto
-body.page
-	color white
-/**
- * Animation bg
- */
-@-webkit-keyframes pan{
-	0%{-webkit-transform:scale(1)}
-	50%{-webkit-transform:scale(1.05)}
-	100%{-webkit-transform:scale(1)}
-}
-@-moz-keyframes pan{
-	0%{-moz-transform:scale(1)}
-	50%{-moz-transform:scale(1.05)}
-	100%{-moz-transform:scale(1)}
-}
-@-o-keyframes pan{
-	0%{-o-transform:scale(1)}
-	50%{-o-transform:scale(1.05)}
-	100%{-o-transform:scale(1)}
-}
-@keyframes pan{
-	0%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
-	50%{-webkit-transform:scale(1.05);-moz-transform:scale(1.05);-ms-transform:scale(1.05);transform:scale(1.05)}
-	100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
-}
+	&-img
+		display block
+		margin 0 auto
 
+body.fp-viewing-0-1
+body.fp-viewing-1-1
+body.fp-viewing-2-1
+body.fp-viewing-3-1
+body.fp-viewing-4-1
+body.fp-viewing-5-1
+body.fp-viewing-6-1
+.single-film
+	#fp-nav
+		display none
+	
+#fp-nav
+	ul li a span
+		height 8px
+		width 8px
+		background rgba(255,255,255,0.5) 
 
+	&.right
+		right 0
+	span
+		background rgba(255,255,255,0.5) 
+		border none 
+		opacity .7
+		transform scale(0.7) 
+		transition all .2s ease
+		width 12px
+		height 12px
+		
+
+	&:hover		
+	.active
+		span
+			background white !important
+			transform scale(1) 
+			opacity 1
+@media screen and (min-width: 800px)
+	#fp-nav
+		&.right
+			right 65px 
+.fp-controlArrow
+	border none
+	//top auto
+	//bottom 0
+	&.fp-prev
+	&.fp-next
+		font-family 'FontAwesome'
+		font-size 4em
+		color white
+		display block
+		height 50px
+		width 50px
+		//background-color rgba(256,256,256,0.85)
+		//border-radius 50%
+		//box-shadow 1px 1px 2px rgba(0,0,0,0.75)
+		&:hover
+			background-color rgba(256,256,256,1)
+			color oscuro
+		
+		
+
+	&.fp-prev
+		&:before
+			content "\f104"
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%,-50%)
+	&.fp-next
+		//right 2.5rem
+		&:before
+			content "\f105"
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%,-50%)
+				
+/*@media screen and (min-width: 800px)
+	.fp-controlArrow
+		&.fp-next
+			right 180px*/
+
+.owl-nav
+	position absolute
+	top -70px
+	right 1rem
+	.owl-prev
+	.owl-next
+		display inline-block
+		font-size 3rem
+		color azul
+		padding .5rem .8rem
+@media screen and (min-width: 768px)
+	.owl-nav
+		right 5rem				

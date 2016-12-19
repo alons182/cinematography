@@ -13,9 +13,9 @@
  */
 
 get_header(); ?>
-<div class="page-normal" >
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" ><img src="<?php echo get_template_directory_uri();  ?>/img/logo-white.png" alt="Logo" /></a>
-	<div class="inner">
+<div class="section section-page" >
+	
+	
        
 
         	<?php
@@ -34,7 +34,6 @@ get_header(); ?>
             
        
 
-    </div>
 </div>
 
 	
