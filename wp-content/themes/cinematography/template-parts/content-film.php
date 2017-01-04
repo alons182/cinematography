@@ -73,7 +73,7 @@
 		  
 		 <?php 
 		  $categories = get_the_terms($post, 'film-category' );//get_the_category();
- 		  $film_title = "More Films";
+ 		  $film_title = "Portfolio";
  		   
 		if ( ! empty( $categories ) ) {
 

@@ -117,6 +117,11 @@ function cinematography_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cinematography_scripts' );
 
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'film', 'excerpt' );
+}
+
 /**
  * Implement the Custom Header feature.
  */

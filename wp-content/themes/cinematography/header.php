@@ -15,7 +15,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Lato:300,400' rel='stylesheet' type='text/css'>
+
 <?php wp_head(); ?>
 </head>
 
@@ -38,6 +39,12 @@
 				 <button id="btn-menu" class="header-btn-menu">
 		            <i class="fa fa-bars"></i>
 		        </button>
+	</div>
+	<div class="header-social">
+		<a href="#" class="header-social-item"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="header-social-item"><i class="fa fa-instagram"></i></a>
+		<a href="#" class="header-social-item"><i class="fa fa-pinterest"></i></a>
+		<a href="#" class="header-social-item"><i class="fa fa-vimeo"></i></a>
 	</div>
 	 
 </header>

@@ -41,12 +41,12 @@ $("#testimonials").owlCarousel({
 $(".films-container").owlCarousel({
           center:true,
           mouseDrag:false,
-          items : 3,
+          items : 2,
           autoplay : false,
           loop : true,
           nav : true,
           navText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-          margin: 10,
+          margin: 50,
           responsiveClass:true,
           responsive:{
               0:{

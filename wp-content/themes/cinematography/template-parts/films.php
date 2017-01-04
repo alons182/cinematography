@@ -1,5 +1,5 @@
 <div class="films">
-     <h2 class="films-title"><?php echo isset($film_title) ? $film_title : "Films" ?> </h2>
+     <h2 class="films-title"><?php echo isset($film_title) ? $film_title : "Portfolio" ?> </h2>
       <div class="films-container owl-carousel owl-theme" >
           <?php
             $args = array(
@@ -30,6 +30,7 @@
                       <?php endif; ?>
                       <div class="films-item-title">
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <?php the_excerpt() ?>
                       </div>
                   </div>
                    
