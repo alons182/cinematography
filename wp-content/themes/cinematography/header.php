@@ -41,10 +41,10 @@
 		        </button>
 	</div>
 	<div class="header-social">
-		<a href="#" class="header-social-item"><i class="fa fa-facebook"></i></a>
-		<a href="#" class="header-social-item"><i class="fa fa-instagram"></i></a>
-		<a href="#" class="header-social-item"><i class="fa fa-pinterest"></i></a>
-		<a href="#" class="header-social-item"><i class="fa fa-vimeo"></i></a>
+		<a href="https://www.facebook.com/CostaRicaCinematography" class="header-social-item" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.instagram.com/cr_cinematography/" class="header-social-item" target="_blank"><i class="fa fa-instagram"></i></a>
+		<a href="https://www.pinterest.com/CR_Cine/" class="header-social-item" target="_blank"><i class="fa fa-pinterest"></i></a>
+		<a href="https://vimeo.com/costaricacinematography" class="header-social-item" target="_blank"><i class="fa fa-vimeo"></i></a>
 	</div>
 	 
 </header>
